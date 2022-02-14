@@ -5,8 +5,6 @@ const path = require('path');
 
 const api = require('./server/routes/api');
 
-const port = 5000;
-
 const app = express();
 
 app.use(cors());
@@ -21,6 +19,6 @@ app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'dist/imdb-watchlist/index.html'));
 });
 
-app.listen(port, function () {
+app.listen(process.env.PORT || 3000, function () {
     console.log('Server running on localhost:' + port);
 });

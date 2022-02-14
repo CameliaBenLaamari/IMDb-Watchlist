@@ -1,0 +1,56 @@
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+    padding: 5vh 15vh 3vh 15vh;
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 0;
+}
+
+.navbar li {
+    margin-left: 5vw;
+    font-size: 2vh;
+    font-weight: 600;
+    color: white;
+    font-family: 'Barlow', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.2vh;
+}
+
+.navbar li {
+    color: #3900D6;
+}
+
+.navbar li:first-child {
+    color: #4400FF;
+}
+
+.navbar li:last-child {
+    color: #390099;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.column {
+    display: block;
+    text-align: right;
+}
+
+.github-btn {
+    margin-bottom: 2vh;
+    border: none;
+    border-radius: 1vh;
+    padding: 1vh 4vh 1vh 4vh;
+    background-color: black;
+    color: white;
+}

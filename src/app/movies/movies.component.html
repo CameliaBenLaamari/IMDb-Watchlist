@@ -1,0 +1,13 @@
+<div class="grid">
+    <div class="card" *ngFor="let movie of movies">
+        <img src="{{movie.Poster}}" alt="poster" id="poster" />
+        <div class="details">
+            <p class="title">{{movie.Title}}</p>
+            <p class="rating">
+                {{movie.IMDbRating}}
+                <img src="assets/etoile.png" alt="etoile"
+                    style="height: 2.5vh; margin-left: 1vh; margin-bottom: 0.7vh;" />
+            </p>
+        </div>
+    </div>
+</div>

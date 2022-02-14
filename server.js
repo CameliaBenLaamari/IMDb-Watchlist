@@ -20,5 +20,5 @@ app.get('*', (req, res) => {
 });
 
 app.listen(process.env.PORT || 3000, function () {
-    console.log('Server running on localhost:' + port);
+    console.log('Server running on localhost:3000');
 });

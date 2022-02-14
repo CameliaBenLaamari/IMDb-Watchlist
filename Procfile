@@ -1,1 +1,1 @@
-web: nodemon server.js && ng serve
+web: npm start

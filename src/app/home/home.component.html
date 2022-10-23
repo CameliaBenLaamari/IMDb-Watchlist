@@ -1,16 +1,28 @@
-<div class="hero ">
-    <!--h1>Welcome to my world, Padawan!</h1-->
-    <img src="assets/welcome.svg" alt="hero text" style="height: 8vh" />
-    <p>Feel free to browse through all the movies and sort by director or genre</p>
-    <form class="form-inline ">
-        <input class="form-control mr-sm-2 " type="search " placeholder="Find a movie or a director... "
-            aria-label="Search ">
-        <button class="btn btn-outline-primary my-2 my-sm-0 " type="submit ">Search</button>
-    </form>
+<div class="carrousel">
+    <button mat-icon-button color="primary" aria-label="Previous" (click)="previousPage" disabled={{firstPage}}>
+        <mat-icon>chevron_left</mat-icon>
+    </button>
+    <div class="movie_card" id="bright">
+        <div class="info_section">
+            <div class="movie_header">
+                <img class="locandina" src="{{currentMovie.Poster}}" />
+                <h1>{{currentMovie.Title}}</h1>
+                <h4>{{currentMovie.Year}}, {{currentMovie.Directors}}</h4>
+                <span class="minutes">{{currentMovie.Runtime}} min</span>
+                <p class="type">{{currentMovie.Genres}}</p>
+            </div>
+            <div class="movie_desc">
+                <p class="text">
+                    {{currentMovie.Description}}
+                </p>
+            </div>
+        </div>
+        <div class="blur_back" style="background: url({{currentMovie.Poster}});
+        background-size: fit;
+        margin-right: -5vh;">
+        </div>
+    </div>
+    <button mat-icon-button color="primary" aria-label="Next" (click)="nextPage" disabled={{lastPage}}>
+        <mat-icon>chevron_right</mat-icon>
+    </button>
 </div>
-<!--div class="custom-shape-divider-bottom-1643827102 ">
-        <svg data-name="Layer 1 " xmlns="http://www.w3.org/2000/svg " viewBox="0 0 1200 120 " preserveAspectRatio="none ">
-      <path d="M600,112.77C268.63,112.77,0,65.52,0,7.23V120H1200V7.23C1200,65.52,931.37,112.77,600,112.77Z "
-        class="shape-fill "></path>
-    </svg>
-    </div-->

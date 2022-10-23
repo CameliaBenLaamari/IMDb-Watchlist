@@ -3,22 +3,30 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MovieDetailComponent } from './movie-detail/movie-detail.component';
-import { HomeComponent } from './home/home.component';
 import { MoviesComponent } from './movies/movies.component';
 import { HttpClientModule } from '@angular/common/http';
+import { MatPaginatorModule } from '@angular/material/paginator';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MoviesComponent,
-    MovieDetailComponent,
-    HomeComponent,
+    MoviesComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatPaginatorModule,
+    BrowserAnimationsModule,
+    MatButtonModule,
+    MatIconModule,
+    MatGridListModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

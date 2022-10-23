@@ -1,3 +1,23 @@
+.background {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    margin: 0;
+    background: url("https://products.ls.graphics/mesh-gradients/images/03.-Snowy-Mint_1.jpg");
+    background: url("https://products.ls.graphics/mesh-gradients/images/08.-Violet-Blue.jpg");
+    background: url("https://products.ls.graphics/mesh-gradients/images/79.-Heliotrope_1.jpg");
+    background: url("https://products.ls.graphics/mesh-gradients/images/82.-Ice-cream.jpg");
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    position: relative;
+    min-width: 100%;
+    min-height: 100%;
+}
+
 .navbar {
     display: flex;
     align-items: center;
@@ -18,22 +38,9 @@
     margin-left: 5vw;
     font-size: 2vh;
     font-weight: 600;
-    color: white;
-    font-family: 'Barlow', sans-serif;
+    color: #2b2d42;
     text-transform: uppercase;
     letter-spacing: 0.2vh;
-}
-
-.navbar li {
-    color: #3900D6;
-}
-
-.navbar li:first-child {
-    color: #4400FF;
-}
-
-.navbar li:last-child {
-    color: #390099;
 }
 
 a {

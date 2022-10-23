@@ -1,13 +1,22 @@
-<div class="grid">
-    <div class="card" *ngFor="let movie of movies">
-        <img src="{{movie.Poster}}" alt="poster" id="poster" />
-        <div class="details">
-            <p class="title">{{movie.Title}}</p>
-            <p class="rating">
-                {{movie.IMDbRating}}
-                <img src="assets/etoile.png" alt="etoile"
-                    style="height: 2.5vh; margin-left: 1vh; margin-bottom: 0.7vh;" />
-            </p>
-        </div>
+<div class="container">
+    <div class="grid">
+        <mat-grid-list cols="5" rowHeight="400px" style="width: 100%">
+            <mat-grid-tile *ngFor="let movie of pageSlice">
+                <button class="card">
+                    <img src={{movie.Poster}} alt="poster" class="poster" />
+                    <p class="title">{{movie.Title}}</p>
+                    <div class="details">
+                        <p>{{movie.Year}} &#x2022; {{movie.Runtime}} min</p>
+                        <p></p>
+                        <p class="type">{{movie.Genres.split(", ")[0]}}</p>
+                    </div>
+                </button>
+                <div *ngIf="selected" class="movie_card" id="bright">
+                </div>
+            </mat-grid-tile>
+        </mat-grid-list>
     </div>
+    <mat-paginator class="paginator" [length]="this.movies.length || 10" [pageSize]="this.pageSlice.length"
+        (page)="onPageChange($event)">
+    </mat-paginator>
 </div>
